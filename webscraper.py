@@ -138,6 +138,8 @@ with app_col[1]:
                     generated_summary = st.session_state.summary[0]['summary_text']
                     st.write(generated_summary)
                     Copy_Text(generated_summary)
+            else:
+                st.info("unable to scrap this website")
         
         ################# question answering #####################
 
@@ -149,11 +151,11 @@ with app_col[1]:
                         """
                         <style>
                             /* Fix the chat input box at the bottom */
-                            div[data-testid="stChatInput"] {
+                            .stColumn.st-emotion-cache-115gedg.e1f1d6gn3 div[data-testid="stChatInput"] {
                                 position: fixed;
                                 bottom: 0;
                                 margin-bottom: 36px;
-                                
+                                max-width: 100%;
                             }
                         </style>
                         """,
@@ -195,6 +197,9 @@ with app_col[1]:
                         if st.button("🗑️ Clear Chat"):
                             st.session_state.messages = []
                             st.rerun()
+
+            else:
+                st.info("unable to scrap this website")
 
 # app settings css
 insert_css("css_files/app.css")
