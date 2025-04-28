@@ -76,11 +76,11 @@ if select_mode == "Que/Ans":
             """
             <style>
                 /* Fix the chat input box at the bottom */
-                div[data-testid="stChatInput"] {
+                .stColumn.st-emotion-cache-115gedg.e1f1d6gn3 div[data-testid="stChatInput"] {
                     position: fixed;
                     bottom: 0;
                     margin-bottom: 36px;
-                    
+                    max-width: 100%;
                 }
             </style>
             """,
