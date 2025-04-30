@@ -79,13 +79,10 @@ To run this project locally, use the following commands:
 ![Screenshot 2025-04-30 203807](https://github.com/user-attachments/assets/74da0e0d-1729-405c-a7c7-a42879fea8ff)
 
 
+![Screenshot 2025-04-30 220505](https://github.com/user-attachments/assets/d54601bf-be66-4aaf-af78-780676f68a68)
 
 
 
-
-
-
-
-
+![Screenshot 2025-04-30 220646](https://github.com/user-attachments/assets/899001bb-4352-473d-b57d-529a47481518)
 
 
