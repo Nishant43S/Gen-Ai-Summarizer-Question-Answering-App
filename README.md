@@ -51,14 +51,16 @@ Ensure Python 3.7+ is installed.
 
 To run this project locally, use the following commands:
 
+- clone repo
 ```bash
   git clone https://github.com/Nishant43S/Gen-Ai-Summarizer-Question-Answering-App.git
 ```
 
+- install requirements
 ```bash
   pip install -r requirements.txt
 ```
-to run
+- to run
 
 ```bash
   python -m streamlit run app.py
