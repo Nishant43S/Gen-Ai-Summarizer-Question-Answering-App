@@ -36,8 +36,10 @@ This is a Generative AI-powered application for extracting insights from various
 ---
 
 ## 🌐 Hosted On
-[Hugging Face Spaces](https://huggingface.co/spaces/)  
-(Search for your app name there or add the direct link if available.)
+
+### huggingface spaces
+
+[Click to use](https://nishant43s-que-ans-summarizer-app.hf.space/)  
 
 ---
 
@@ -50,7 +52,7 @@ Ensure Python 3.7+ is installed.
 To run this project locally, use the following commands:
 
 ```bash
-  git clone https://github.com/Nishant43S/file-link-Generator.git
+  git clone https://github.com/Nishant43S/Gen-Ai-Summarizer-Question-Answering-App.git
 ```
 
 ```bash
@@ -61,3 +63,27 @@ to run
 ```bash
   python -m streamlit run app.py
 ```
+
+--- 
+
+## app screen shorts
+
+![Screenshot 2025-04-30 202957](https://github.com/user-attachments/assets/3daff48d-32d6-4582-8f28-361101785cfa)
+
+
+![Screenshot 2025-04-30 203016](https://github.com/user-attachments/assets/6c3410a1-0bcc-4fd7-b429-2d656b15d765)
+
+
+![Screenshot 2025-04-30 203807](https://github.com/user-attachments/assets/74da0e0d-1729-405c-a7c7-a42879fea8ff)
+
+
+
+
+
+
+
+
+
+
+
+
