@@ -81,9 +81,7 @@ def insert_css(css_file:str):
 # app settings css
 insert_css("css_files/app.css")
 
-def extract_pdf_text(pdf_file):
-    """Extracts text from a PDF file."""
-    return extract_text(pdf_file)
+
 
 
 
@@ -139,7 +137,7 @@ def extract_text_from_pdf(pdf_file, page_num):
         st.error(f"Error extracting text: {e}")
         return None, 0
 
-def pdf_Summarizer(file):
+def pdf_page_text(file):
 
     temp_reader = PyPDF2.PdfReader(file)
     total_pages = len(temp_reader.pages)
@@ -232,12 +230,23 @@ with que_col[1]:
                     max_answer_length=max_answer_length
                 )
             else:
-                text = extract_pdf_text(File_input)
-                Chat_Bot(
-                    text_input=Text_Cleaning(text),
-                    Best_size=Best_size_,
-                    max_answer_length=max_answer_length
-                )
+                file_Display_tab, Pdf_Que_ans_tab = st.tabs(["Pdf Display","PDF Que/Ans"])
+
+                with file_Display_tab:
+                    with st.spinner("Loading File..."):
+                        display_pdf_file(File_input)
+                with Pdf_Que_ans_tab:
+                    st.session_state.pdf_text_que_ans = []
+                    st.session_state.pdf_text_que_ans  = pdf_page_text(File_input)
+                    st.text_area(
+                            "Pdf Text",value=Text_Cleaning(st.session_state.pdf_text_que_ans),
+                            key="text area que and ans",height=300
+                        )
+                    Chat_Bot(
+                        text_input=Text_Cleaning(st.session_state.pdf_text_que_ans),
+                        Best_size=Best_size_,
+                        max_answer_length=max_answer_length
+                    )
 
 # session state
 if 'input_text' not in st.session_state:
@@ -282,13 +291,13 @@ with summ_col[1]:
             else:
                 pdf_Display_tab, Pdf_Summarizer_tab = st.tabs(["Pdf Display","PDF Summarizer"])
                 with pdf_Display_tab:
-                    display_pdf_file(File_input)
-
+                    with st.spinner("Loading File..."):
+                        display_pdf_file(File_input)
                 with Pdf_Summarizer_tab:
                         
                     st.session_state.pdf_text = []
                     st.session_state.summary_text = []
-                    st.session_state.pdf_text = pdf_Summarizer(File_input)
+                    st.session_state.pdf_text = pdf_page_text(File_input)
 
                     ## text area
                     Text_Area_Input = st.text_area(
@@ -315,9 +324,3 @@ with summ_col[1]:
 
                             st.write(st.session_state.summary_text)
                             Copy_Text(st.session_state.summary_text)
-
-
-
-
-
-                
