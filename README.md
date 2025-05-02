@@ -86,3 +86,13 @@ To run this project locally, use the following commands:
 ![Screenshot 2025-04-30 220646](https://github.com/user-attachments/assets/899001bb-4352-473d-b57d-529a47481518)
 
 
+
+### Flow chart
+![flow chart](https://github.com/user-attachments/assets/a48d9f97-70b5-40ec-8e84-aa2d736a01a1)
+
+
+
+
+
+
+
